@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YolaNabilah_2120021_WPII_2.6BB</title>
+<style>
+    /* CSS styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        max-width: 600px;
+        width: 90%;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center; /* Align text to center */
+    }
+    h1 {
+        margin-top: 0; /* Remove default margin */
+        font-size: 24px; /* Larger font size */
+        margin-bottom: 20px; /* Add some spacing */
+    }
+    #inputField {
+        width: calc(100% - 140px); /* Adjust width */
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-right: 10px;
+        box-sizing: border-box;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #0000FF;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-left: 10px; /* Add margin to the left */
+    }
+    #displayArea {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        min-height: 50px;
+        line-height: 1.6; /* Increase line height for better readability */
+        word-wrap: break-word; /* Wrap long words */
+        text-align: left; /* Align text to left */
+    }
+    #displayArea p {
+        margin: 0;
+    }
+    #displayArea.empty {
+        display: none;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Masukkan Teks yang Mau Diketik</h1>
+        <!--HTML content-->
+        <input type="text" id="inputField" placeholder="Enter Text......">
+        <button onclick="displayText()">Input</button> 
+        <div id="displayArea" class="empty"></div>
+    </div>
+
+    <!-- JavaScript code-->
+    <script>
+        function displayText() {
+            //get the input value
+            var inputText = document.getElementById("inputField").value;
+            //get the display area
+            var displayArea = document.getElementById("displayArea");
+            //update display area with input text
+            displayArea.innerText = inputText;
+            //show display area if it's not empty
+            displayArea.classList.remove("empty");
+        }
+    </script>
+</body>
+</html>
